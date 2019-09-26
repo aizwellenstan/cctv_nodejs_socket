@@ -11,9 +11,54 @@ server.listen(6147, function(){
 
 var cams = ['rtsp://192.168.1.200/user=admin&password=&channel=2&stream=0.sdp',
 		'rtsp://106.107.181.243/user=admin&password=&channel=1&stream=0.sdp',
-		'rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov'
-		// , 'rtsp://192.168.68.111/h264main'
-		// , 'udp://localhost:1234'
+		// 'rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov',
+		'rtsp://106.107.181.243/user=admin&password=&channel=1&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=2&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=3&stream=0.sdp',
+  		'rtsp://106.107.181.243/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=6&stream=0.sdp',
+		'rtsp://114.33.126.228/user=admin&password=&channel=1&stream=0.sdp',
+		'rtsp://220.132.94.244/user=admin&password=&channel=1&stream=0.sdp',
+		'rtsp://220.132.94.244/user=admin&password=&channel=2&stream=0.sdp',
+		'rtsp://220.132.94.244/user=admin&password=&channel=3&stream=0.sdp',
+		'rtsp://220.132.94.244/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://220.132.94.244/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=1&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=2&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=3&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=6&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=7&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=9&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=10&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=11&stream=0.sdp',
+		'rtsp://60.251.229.163/user=admin&password=&channel=12&stream=0.sdp',
+		'rtsp://59.126.20.93/user=admin&password=&channel=1&stream=0.sdp',
+
+		'rtsp://59.126.20.93/user=admin&password=&channel=2&stream=0.sdp',
+		'rtsp://59.126.20.93/user=admin&password=&channel=3&stream=0.sdp',
+		'rtsp://59.126.20.93/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://59.126.20.93/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://59.126.20.93/user=admin&password=&channel=6&stream=0.sdp',
+
+		'rtsp://122.117.242.57/user=admin&password=&channel=1&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=2stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=3&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=6&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=7&stream=0.sdp',
+		'rtsp://122.117.242.57/user=admin&password=&channel=8&stream=0.sdp',
+
+		'rtsp://106.107.181.243/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=5&stream=0.sdp',
+		'rtsp://106.107.181.243/user=admin&password=&channel=6&stream=0.sdp',
+
+		'rtsp://192.168.1.200/user=admin&password=&channel=4&stream=0.sdp',
+		'rtsp://192.168.1.200/user=admin&password=&channel=3&stream=0.sdp',
+		'rtsp://192.168.1.200/user=admin&password=&channel=2&stream=0.sdp'
 	].map(function(uri, i) {
 		var stream = new rtsp.FFMpeg({input: uri, resolution: '1280*720', quality: 14});
 		stream.on('start', function() {
