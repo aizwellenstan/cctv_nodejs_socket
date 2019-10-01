@@ -68,7 +68,12 @@ var cams = ['rtsp://192.168.1.200/user=admin&password=&channel=2&stream=0.sdp',
 			console.log('stream ' + i + ' stopped');
 		});
 		return stream;
-	});
+	})
+
+	function sleep(waitMsec) {
+		var startMsec = new Date()
+		while (new Date() - startMsec < waitMsec) {}
+	}
 
 cams.forEach(function(camStream, i) {
 	var ns = io.of('/cam' + i);
