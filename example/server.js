@@ -88,7 +88,8 @@ cams.forEach(function(camStream, i) {
 			console.log('disconnected from /cam' + i);
 			camStream.removeListener('data', pipeStream);
 		});
-	});
+	})
+	sleep(250)
 });
 
 io.on('connection', function(socket) {
